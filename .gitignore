@@ -60,3 +60,4 @@ fabric.properties
 
 # Mac
 .DS_Store
+.utmp/
