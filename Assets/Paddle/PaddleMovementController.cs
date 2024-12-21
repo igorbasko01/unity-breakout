@@ -45,7 +45,7 @@ public class PaddleMovementController : MonoBehaviour
         _movement = context.ReadValue<Vector2>();
         if (context.control.device is Mouse || context.control.device is Touchscreen)
         {
-            var mouseWorldPosition = _mainCamera.ScreenToWorldPoint(new Vector3(_movement.x, _movement.y, _mainCamera.nearClipPlane));
+            var mouseWorldPosition = _mainCamera.ScreenToWorldPoint(new Vector3(_movement.x, _movement.y, -_mainCamera.transform.position.z));
             var position = transform.position;
             position.x = Mathf.Clamp(mouseWorldPosition.x, _leftBoundary, _rightBoundary);
             transform.position = position;
