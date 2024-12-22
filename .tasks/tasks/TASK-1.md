@@ -4,8 +4,8 @@ title: Create sticky paddle
 created: 2024-12-21 22:40:04
 priority: Medium
 category: Feature
-owner: 
-board: Backlog
+owner: None
+board: In Progress
 ---
 
 ## Description
@@ -115,7 +115,6 @@ The basic approach is as follows:
 - [ ] Create IStickable interface.
 - [ ] Create MonoBehaviour that implements the IStickable interface. It is stickable only until fired.
 - [ ] Attach this MonoBehaviour to the paddle.
-- [ ] This MonoBehaviour maybe should implement un sticking by listennig to input.
 - [ ] Create input action for LMB, Touch tap, and Keyboard Space, that will disable the stickiness.
 
 ## Notes
@@ -123,3 +122,5 @@ The basic approach is as follows:
 
 ## History
 2024-12-21 22:40:04 - Created
+
+2024-12-22 07:59:49 - Moved to In Progress
