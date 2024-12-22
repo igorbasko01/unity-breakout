@@ -9,13 +9,14 @@ public class PaddleMovementController : MonoBehaviour
     private float _leftBoundary;
     [SerializeField] private Collider _rightBoundaryCollider;
     private float _rightBoundary;
-    [SerializeField] private Collider _paddleCollider;
+    private Collider _paddleCollider;
     private Camera _mainCamera;
 
     private void Awake()
     {
         _inputActions = new InputSystem_Actions();
         _mainCamera = Camera.main;
+        _paddleCollider = GetComponent<BoxCollider>();
     }
 
     private void Start()

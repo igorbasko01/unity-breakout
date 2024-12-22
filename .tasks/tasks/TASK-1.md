@@ -5,7 +5,7 @@ created: 2024-12-21 22:40:04
 priority: Medium
 category: Feature
 owner: None
-board: In Progress
+board: Done
 ---
 
 ## Description
@@ -112,10 +112,11 @@ public class Ball : MonoBehaviour
 ```
 
 The basic approach is as follows:
-- [ ] Create IStickable interface.
-- [ ] Create MonoBehaviour that implements the IStickable interface. It is stickable only until fired.
-- [ ] Attach this MonoBehaviour to the paddle.
-- [ ] Create input action for LMB, Touch tap, and Keyboard Space, that will disable the stickiness.
+- [x] Create IStickable interface.
+- [x] Create MonoBehaviour that implements the IStickable interface. It is stickable only until fired.
+- [x] Attach this MonoBehaviour to the paddle.
+- [x] Create input action for LMB, Touch tap, and Keyboard Space, that will disable the stickiness.
+- [x] Implement the Ball's stickiness logic.
 
 ## Notes
 
@@ -124,3 +125,5 @@ The basic approach is as follows:
 2024-12-21 22:40:04 - Created
 
 2024-12-22 07:59:49 - Moved to In Progress
+
+2024-12-22 23:17:41 - Moved to Done
