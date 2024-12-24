@@ -3,14 +3,22 @@ using UnityEngine;
 
 public class BallMovementController : MonoBehaviour
 {
+    private float _initialSpeed = 10f;
     [SerializeField] private float _speed = 10f;
+    private Vector3 _initialDirection = new Vector3(1, 1, 0).normalized;
     private Vector3 _direction;
     private IStickable _currentStickable;
     private Collider _currentStickableCollider;
 
-    private void Start()
+    public void Reset()
     {
-        _direction = new Vector3(1, 1, 0).normalized;
+        _direction = _initialDirection;
+        _speed = _initialSpeed;
+    }
+
+    private void OnEnable()
+    {
+        Reset();
     }
 
     private void OnTriggerEnter(Collider other)
