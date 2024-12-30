@@ -59,9 +59,14 @@ public class BallMovementController : MonoBehaviour
 
     private void HandleBounce(Collider other)
     {
-        Vector3 collisionNormal = (other.ClosestPoint(transform.position) - transform.position).normalized;
+        // Vector3 collisionNormal = (other.ClosestPoint(transform.position) - transform.position).normalized;
         
-        _direction = Vector3.Reflect(_direction, collisionNormal);
+        // _direction = Vector3.Reflect(_direction, collisionNormal);
+        var directionChanger =  other.GetComponent<IDirectionChanger>();
+        if (directionChanger != null)
+        {
+            _direction = directionChanger.CalculateNewDirection(transform.position, _direction);
+        }
 
         // Slighly move the ball to prevent it from getting stuck in the wall
         transform.position += _direction * 0.01f;
