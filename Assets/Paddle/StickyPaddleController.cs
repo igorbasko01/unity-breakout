@@ -19,6 +19,8 @@ public class StickyPaddleController : MonoBehaviour, IStickable
         }
     }
 
+    [SerializeField] bool _keepSticky = true;
+
     [SerializeField] private bool _isSticky = true;
     private InputSystem_Actions _inputActions;
 
@@ -38,6 +40,7 @@ public class StickyPaddleController : MonoBehaviour, IStickable
     {
         if (!IsSticky) return;
         IsSticky = false;  // Using property setter to trigger event
+        IsSticky = _keepSticky;
     }
 
     private void OnDisable()

@@ -5,7 +5,7 @@ created: 2024-12-23 07:15:14
 priority: Medium
 category: Feature
 owner: None
-board: In Progress
+board: Done
 ---
 
 ## Description
@@ -24,3 +24,5 @@ The script components are called "BounceDirectionChanger" and "RelativeBounceDir
 2024-12-23 07:15:14 - Created
 
 2024-12-28 09:14:09 - Moved to In Progress
+
+2024-12-30 07:45:23 - Moved to Done
